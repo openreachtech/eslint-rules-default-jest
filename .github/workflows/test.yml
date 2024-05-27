@@ -1,0 +1,38 @@
+name: Node.js CI
+
+on:
+  push:
+    branches:
+      - dev
+      - env
+      - main
+  pull_request:
+    branches:
+      - '**'
+jobs:
+  ci:
+    runs-on: ubuntu-latest
+
+    strategy:
+      matrix:
+        node-version: [20.x]
+
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: 🏗️ Use Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v2
+        with:
+          cache: 'npm'
+          cache-dependency-path: '**/package-lock.json'
+          node-version: ${{ matrix.node-version }}
+          registry-url: https://npm.pkg.github.com
+
+      - name: 🔧 setup npm
+        run: npm ci
+
+      - name: 🔬 run lint
+        run: npm run lint
+
+      - name: 🧪 run test
+        run: npm test

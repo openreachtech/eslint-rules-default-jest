@@ -1,0 +1,37 @@
+{
+  "words": [
+    "jsdoc",
+    "openreach",
+    "openreachtech",
+
+    "backreference",
+    "camelcase",
+    "defaultvalue",
+    "eqeqeq",
+    "fileoverview",
+    "hashbang",
+    "iife",
+    "iifes",
+    "linebreak",
+    "namepaths",
+    "nocheck",
+    "nonblock",
+    "nonoctal",
+    "nonwords",
+    "oneline",
+    "parens",
+    "plusplus",
+    "ruleset",
+    "rulesets",
+    "wizaction",
+
+    "noalias",
+    "nocollapse",
+    "nocompile",
+    "noinline",
+    "nosideeffects",
+
+    "bject",
+    "rray"
+  ]
+}
