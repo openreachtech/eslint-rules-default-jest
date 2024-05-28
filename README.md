@@ -1,4 +1,4 @@
-# eslint-rules-default
+# eslint-rules-default-jest
 
 ## Language
 
@@ -7,7 +7,7 @@
 
 ## Overview
 
-This package provides ESLint rules with default options.
+This package provides ESLint Jest plugin rules with default options.
 
 If this package is used as a base ruleset in another ESLint config repository, all rules
 are enabled by default. You must explicitly turn off each rule that you want to disable.
@@ -30,112 +30,44 @@ Install this package alongside ESLint v9 or greater:
 ```sh
 npm install --save-dev \
   eslint \
-  @openreachtech/eslint-rules-default
+  @openreachtech/eslint-rules-default-jest
 ```
 
 ### Configuring
 
-In your `eslint.config.js` file, import `@openreachtech/eslint-rules-default` and include the all rules to use it:
+In your `eslint.config.js` file, import `@openreachtech/eslint-rules-default-jest` and include the all rules to use it:
 
 ```js
 // eslint.config.js
-import ruleHash from '@openreachtech/eslint-rules-default'
+import jestPlugin from '@openreachtech/eslint-rules-default-jest'
 
 export default [
   {
-    rules: {
-      ...ruleHash.core.rules,
-      ...ruleHash.disableCoreStylistic.rules, // Not required after v10.
+    ...jestPlugin,
 
-      indent: [
+    rules: {
+      ...jestPlugin.rules,
+
+      'jest/consistent-test-it': [
         'error',
-        2, // 4
-      ],
-      quotes: [
-        'error',
-        'single', // 'double'
         {
-          avoidEscape: true,
-          allowTemplateLiterals: false,
+          fn: 'test',
+          withinDescribe: 'test', // 'it'
         },
       ],
-      semi: [
+      'jest/prefer-lowercase-title': [
         'error',
-        'never', // 'always'
         {
-          beforeStatementContinuationChars: 'never', // 'any'
+          ignore: [],
+          allowedPrefixes: [],
+          ignoreTopLevelDescribe: false, // true
         },
       ],
 
       ...
     },
   },
-];
-```
-
-#### Advanced Configuration
-
-This package also contains several rulesets for several plugin.
-
-1. [@stylistic/eslint-plugin](https://www.npmjs.com/package/@stylistic/eslint-plugin)
-2. [ESLint Jest plugin](https://www.npmjs.com/package/eslint-plugin-jest)
-3. [ESLint JSDoc plugin](https://www.npmjs.com/package/eslint-plugin-jsdoc)
-
-`@stylistic/eslint-plugin` rulesets included in this version are:
-
-| ruleset | included |
-|:--|:--:|
-| eslint-plugin-js | ✅ |
-| eslint-plugin-ts | ❌ |
-| eslint-plugin-jsx | ❌ |
-| eslint-plugin-plus | ✅ |
-
-`ruleHash.stylistics` and `ruleHash.stylistic Jsx` will be added in the future, if there are many needs.
-
-#### Frequently-Disabled Rules
-
-Core rules of ESLint v9 includes stylistic-related rules.
-
-When using `@stylistic/eslint-plugin` with ESLint v9, please disable stylistic-related rules in the core ruleset as follows:
-
-
-```js
-// eslint.config.js
-import ruleHash from '@openreachtech/eslint-rules-default'
-
-export default [
-  // core rules
-  {
-    rules: {
-      ...ruleHash.core.rules,
-      ...ruleHash.disableCoreStylistic.rules,
-
-      indent: [
-        'error',
-        2, // 4
-      ],
-
-      ...
-    },
-  },
-
-  // @stylistic rules
-  {
-    ...ruleHash.stylisticJs,
-
-    rules: [
-      ...ruleHash.stylisticJs.rules,
-      ...ruleHash.stylisticPlus.rules,
-
-      '@stylistic/indent-binary-ops': [
-        'error',
-        4, // 2
-      ],
-
-      ...
-    ],
-  },
-];
+]
 ```
 
 ## Track of Changes with Line Comments
@@ -144,37 +76,35 @@ When overwriting default values ​​in each ESLint Config package, we recommen
 
 ```js
 // eslint.config.js
-import ruleHash from '@openreachtech/eslint-rules-default'
+import jestPlugin from '@openreachtech/eslint-rules-default-jest'
 
 export default [
   {
-    rules: {
-      ...ruleHash.core.rules,
-      ...ruleHash.disableCoreStylistic.rules,
+    ...jestPlugin,
 
-      indent: [
+    rules: {
+      ...jestPlugin.rules,
+
+      'jest/consistent-test-it': [
         'error',
-        2, // 4 <--- ✅
-      ],
-      quotes: [
-        'error',
-        'single', // 'double' <--- ✅
         {
-          avoidEscape: true,
-          allowTemplateLiterals: false,
+          fn: 'test',
+          withinDescribe: 'test', // 'it' <--- ✅
         },
       ],
-      semi: [
+      'jest/prefer-lowercase-title': [
         'error',
-        'never', // 'always' <--- ✅
         {
-          beforeStatementContinuationChars: 'never', // 'any' <--- ✅
+          ignore: [],
+          allowedPrefixes: [],
+          ignoreTopLevelDescribe: false, // true <--- ✅
         },
       ],
+
       ...
     },
   },
-];
+]
 ```
 
 ## License
@@ -192,9 +122,10 @@ Please feel free to contact us through GitHub Issues or Pull Requests.
 We strive to meet user expectations and your contributions are highly appreciated!
 
 ```sh
-% git clone https://github.com/openreachtech/eslint-rules-default.git
-% cd eslint-rules-default
+% git clone https://github.com/openreachtech/eslint-rules-default-jest.git
+% cd eslint-rules-default-jest
 % npm install
+% npm run lint
 % npm test
 ```
 
