@@ -1,8 +1,10 @@
 'use strict'
 
+const jsRules = require('@eslint/js')
+const jsdocPlugin = require('eslint-plugin-jsdoc')
 const openreachtechPlugin = require('eslint-plugin-openreachtech')
 
-const ruleHash = require('./index')
+const jestPlugin = require('./index')
 
 /**
  * ESLint Config
@@ -36,8 +38,9 @@ module.exports = [
 
   {
     rules: {
-      ...ruleHash.core.rules,
-      ...ruleHash.disableCoreStylistic.rules,
+      ...jsRules.configs
+        .all
+        .rules,
 
       indent: [
         'error',
@@ -1561,10 +1564,10 @@ module.exports = [
     },
   },
   {
-    ...ruleHash.jest,
+    ...jestPlugin,
 
     rules: {
-      ...ruleHash.jest.rules,
+      ...jestPlugin.rules,
 
       'jest/consistent-test-it': [
         'error',
@@ -1773,12 +1776,9 @@ module.exports = [
   },
   {
     plugins: {
-      ...ruleHash.jsdoc.plugins,
+      jsdoc: jsdocPlugin,
     },
-
     rules: {
-      ...ruleHash.jsdoc.rules,
-
       'jsdoc/check-access': [
         'error',
       ],
