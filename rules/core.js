@@ -214,18 +214,11 @@ module.exports = {
     'jest/valid-title': [
       'error',
       {
+        ignoreSpaces: false,
         ignoreTypeOfDescribeName: false,
         disallowedWords: [],
-        mustMatch: {
-          describe: [],
-          it: [],
-          test: [],
-        },
-        mustNotMatch: {
-          describe: [],
-          it: [],
-          test: [],
-        },
+        mustMatch: {},
+        mustNotMatch: {},
       },
     ],
   },
