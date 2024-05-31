@@ -14,7 +14,8 @@
   "files": [
     "index.js",
     "index.mjs",
-    "rules/"
+    "rules/",
+    "types/"
   ],
   "scripts": {
     "l": "npm run lint",
