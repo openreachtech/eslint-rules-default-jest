@@ -1,6 +1,6 @@
 {
   "name": "@openreachtech/eslint-rules-default-jest",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A showcasing package all the Jest plugin rules of ESLint.",
   "main": "index.js",
   "exports": {
@@ -14,7 +14,9 @@
   "files": [
     "index.js",
     "index.mjs",
-    "rules/"
+    "README.js.md",
+    "rules/",
+    "types/"
   ],
   "scripts": {
     "l": "npm run lint",
