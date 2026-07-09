@@ -27,7 +27,7 @@
   "keywords": [
     "ESLint"
   ],
-  "author": "Open Reach Tech inc.",
+  "author": "Open Reach Tech Inc.",
   "license": "MIT",
   "dependencies": {
     "eslint-plugin-jest": "^28.5.0"
