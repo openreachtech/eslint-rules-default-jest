@@ -108,7 +108,7 @@ export default [
 
 ## License
 
-このプロジェクトは MIT ライセンスに基づいてリリースされています。
+このプロジェクトは Apache License 2.0 に基づいてリリースされています。
 
 此方をご覧ください → [LICENSE](./LICENSE)
 
