@@ -137,6 +137,9 @@ export default {
     'jest/padding-around-after-all-blocks': [
       'error',
     ],
+    'jest/padding-around-after-each-blocks': [
+      'error',
+    ],
     'jest/prefer-called-with': [
       'error',
     ],
