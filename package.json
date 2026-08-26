@@ -3,14 +3,6 @@
   "version": "1.0.3",
   "description": "A showcasing package all the Jest plugin rules of ESLint.",
   "main": "index.js",
-  "exports": {
-    ".": {
-      "import": "./index.mjs",
-      "require": "./index.js",
-      "node": "./index.js",
-      "default": "./index.js"
-    }
-  },
   "files": [
     "index.js",
     "index.mjs",
