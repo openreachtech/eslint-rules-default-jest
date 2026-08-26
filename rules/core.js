@@ -47,6 +47,9 @@ export default {
     ],
     'jest/no-conditional-in-test': [
       'error',
+      {
+        allowOptionalChaining: true,
+      },
     ],
     'jest/no-deprecated-functions': [
       'error',
