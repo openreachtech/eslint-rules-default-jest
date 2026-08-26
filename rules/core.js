@@ -51,6 +51,9 @@ export default {
         allowOptionalChaining: true,
       },
     ],
+    'jest/no-confusing-set-timeout': [
+      'error',
+    ],
     'jest/no-deprecated-functions': [
       'error',
     ],
