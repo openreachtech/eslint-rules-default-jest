@@ -125,6 +125,9 @@ export default {
     'jest/no-test-return-statement': [
       'error',
     ],
+    'jest/no-unnecessary-assertion': [
+      'error',
+    ],
     'jest/no-untyped-mock-factory': [
       'error',
     ],
