@@ -66,6 +66,9 @@ export default {
     'jest/no-duplicate-hooks': [
       'error',
     ],
+    'jest/no-error-equal': [
+      'error',
+    ],
     'jest/no-export': [
       'error',
     ],
