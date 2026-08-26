@@ -1,6 +1,6 @@
 {
   "name": "@openreachtech/eslint-rules-default-jest",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "A showcasing package all the Jest plugin rules of ESLint.",
   "main": "index.js",
   "exports": {
@@ -27,7 +27,7 @@
     "ESLint"
   ],
   "author": "Open Reach Tech Inc.",
-  "license": "MIT",
+  "license": "Apache-2.0",
   "dependencies": {
     "eslint-plugin-jest": "^28.5.0"
   },
