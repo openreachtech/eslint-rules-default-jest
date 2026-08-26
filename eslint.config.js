@@ -1673,6 +1673,13 @@ export default [
       'jest/no-test-return-statement': [
         'error',
       ],
+      'jest/no-unnecessary-assertion': [
+        /*
+         * This rule requires type information, which is not generated for the
+         * plain JavaScript sources of this repository.
+         */
+        'off', // 'error'
+      ],
       'jest/no-untyped-mock-factory': [
         'error',
       ],
