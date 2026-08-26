@@ -146,6 +146,9 @@ export default {
     'jest/padding-around-before-all-blocks': [
       'error',
     ],
+    'jest/padding-around-before-each-blocks': [
+      'error',
+    ],
     'jest/prefer-called-with': [
       'error',
     ],
