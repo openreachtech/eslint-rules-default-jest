@@ -232,6 +232,9 @@ export default {
     'jest/prefer-to-have-been-called': [
       'error',
     ],
+    'jest/prefer-to-have-been-called-times': [
+      'error',
+    ],
     'jest/prefer-to-have-length': [
       'error',
     ],
