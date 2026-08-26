@@ -211,6 +211,9 @@ export default {
         maxNumberOfTopLevelDescribes: Infinity,
       },
     ],
+    'jest/unbound-method': [
+      'error',
+    ],
     'jest/valid-describe-callback': [
       'error',
     ],
