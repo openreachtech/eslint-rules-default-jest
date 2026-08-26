@@ -1808,23 +1808,13 @@ export default [
             'returns',
             'return',
           ],
-          customSpacings: [
-            {
-              postDelimiter: 1,
-            },
-            {
-              postTag: 1,
-            },
-            {
-              postType: 1,
-            },
-            {
-              postName: 1,
-            },
-            {
-              postHyphen: 1,
-            },
-          ],
+          customSpacings: {
+            postDelimiter: 1,
+            postTag: 1,
+            postType: 1,
+            postName: 1,
+            postHyphen: 1,
+          },
           preserveMainDescriptionPostDelimiter: false,
           wrapIndent: '',
         },
