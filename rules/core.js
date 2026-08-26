@@ -155,6 +155,9 @@ export default {
     'jest/padding-around-expect-groups': [
       'error',
     ],
+    'jest/padding-around-test-blocks': [
+      'error',
+    ],
     'jest/prefer-called-with': [
       'error',
     ],
