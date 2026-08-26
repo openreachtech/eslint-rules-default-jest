@@ -286,6 +286,12 @@ export default {
         maxArgs: 1,
       },
     ],
+    'jest/valid-expect-with-promise': [
+      'error',
+      {
+        checkThenables: false,
+      },
+    ],
     'jest/valid-title': [
       'error',
       {
