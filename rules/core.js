@@ -152,6 +152,7 @@ export default {
         ignore: [],
         allowedPrefixes: [],
         ignoreTopLevelDescribe: false,
+        ignoreTodos: false,
       },
     ],
     'jest/prefer-mock-promise-shorthand': [
