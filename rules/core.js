@@ -292,6 +292,18 @@ export default {
         checkThenables: false,
       },
     ],
+    'jest/valid-mock-module-path': [
+      'error',
+      {
+        moduleFileExtensions: [
+          '.js',
+          '.ts',
+          '.tsx',
+          '.jsx',
+          '.json',
+        ],
+      },
+    ],
     'jest/valid-title': [
       'error',
       {
