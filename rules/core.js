@@ -149,6 +149,19 @@ export default {
     'jest/prefer-hooks-on-top': [
       'error',
     ],
+    'jest/prefer-importing-jest-globals': [
+      'error',
+      {
+        types: [
+          'hook',
+          'describe',
+          'test',
+          'expect',
+          'jest',
+          'unknown',
+        ],
+      },
+    ],
     'jest/prefer-lowercase-title': [
       'error',
       {
