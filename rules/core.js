@@ -134,6 +134,9 @@ export default {
     'jest/no-untyped-mock-factory': [
       'error',
     ],
+    'jest/padding-around-after-all-blocks': [
+      'error',
+    ],
     'jest/prefer-called-with': [
       'error',
     ],
