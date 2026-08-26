@@ -51,6 +51,9 @@ export default {
         allowOptionalChaining: true,
       },
     ],
+    'jest/no-confusing-set-timeout': [
+      'error',
+    ],
     'jest/no-deprecated-functions': [
       'error',
     ],
@@ -146,6 +149,19 @@ export default {
     'jest/prefer-hooks-on-top': [
       'error',
     ],
+    'jest/prefer-importing-jest-globals': [
+      'error',
+      {
+        types: [
+          'hook',
+          'describe',
+          'test',
+          'expect',
+          'jest',
+          'unknown',
+        ],
+      },
+    ],
     'jest/prefer-lowercase-title': [
       'error',
       {
@@ -194,6 +210,9 @@ export default {
       {
         maxNumberOfTopLevelDescribes: Infinity,
       },
+    ],
+    'jest/unbound-method': [
+      'error',
     ],
     'jest/valid-describe-callback': [
       'error',

@@ -1693,6 +1693,23 @@ export default [
       'jest/prefer-hooks-on-top': [
         'error',
       ],
+      'jest/prefer-importing-jest-globals': [
+        /*
+         * Enabling this rule requires importing the Jest functions from
+         * '@jest/globals', which is not declared as a dependency here.
+         */
+        'off', // 'error'
+        {
+          types: [
+            'hook',
+            'describe',
+            'test',
+            'expect',
+            'jest',
+            'unknown',
+          ],
+        },
+      ],
       'jest/prefer-lowercase-title': [
         'off',
         {
