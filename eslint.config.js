@@ -1618,6 +1618,13 @@ export default [
       'jest/no-duplicate-hooks': [
         'error',
       ],
+      'jest/no-error-equal': [
+        /*
+         * This rule requires type information, which is not generated for the
+         * plain JavaScript sources of this repository.
+         */
+        'off', // 'error'
+      ],
       'jest/no-export': [
         'error',
       ],
@@ -1665,6 +1672,13 @@ export default [
       ],
       'jest/no-test-return-statement': [
         'error',
+      ],
+      'jest/no-unnecessary-assertion': [
+        /*
+         * This rule requires type information, which is not generated for the
+         * plain JavaScript sources of this repository.
+         */
+        'off', // 'error'
       ],
       'jest/no-untyped-mock-factory': [
         'error',
@@ -1772,6 +1786,16 @@ export default [
           ],
           minArgs: 1,
           maxArgs: 1,
+        },
+      ],
+      'jest/valid-expect-with-promise': [
+        /*
+         * This rule requires type information, which is not generated for the
+         * plain JavaScript sources of this repository.
+         */
+        'off', // 'error'
+        {
+          checkThenables: false,
         },
       ],
       'jest/valid-title': [

@@ -66,6 +66,9 @@ export default {
     'jest/no-duplicate-hooks': [
       'error',
     ],
+    'jest/no-error-equal': [
+      'error',
+    ],
     'jest/no-export': [
       'error',
     ],
@@ -122,7 +125,37 @@ export default {
     'jest/no-test-return-statement': [
       'error',
     ],
+    'jest/no-unnecessary-assertion': [
+      'error',
+    ],
+    'jest/no-unneeded-async-expect-function': [
+      'error',
+    ],
     'jest/no-untyped-mock-factory': [
+      'error',
+    ],
+    'jest/padding-around-after-all-blocks': [
+      'error',
+    ],
+    'jest/padding-around-after-each-blocks': [
+      'error',
+    ],
+    'jest/padding-around-all': [
+      'error',
+    ],
+    'jest/padding-around-before-all-blocks': [
+      'error',
+    ],
+    'jest/padding-around-before-each-blocks': [
+      'error',
+    ],
+    'jest/padding-around-describe-blocks': [
+      'error',
+    ],
+    'jest/padding-around-expect-groups': [
+      'error',
+    ],
+    'jest/padding-around-test-blocks': [
       'error',
     ],
     'jest/prefer-called-with': [
@@ -133,6 +166,15 @@ export default {
     ],
     'jest/prefer-each': [
       'error',
+    ],
+    'jest/prefer-ending-with-an-expect': [
+      'error',
+      {
+        assertFunctionNames: [
+          'expect',
+        ],
+        additionalTestBlockFunctions: [],
+      },
     ],
     'jest/prefer-equality-matcher': [
       'error',
@@ -162,6 +204,9 @@ export default {
         ],
       },
     ],
+    'jest/prefer-jest-mocked': [
+      'error',
+    ],
     'jest/prefer-lowercase-title': [
       'error',
       {
@@ -172,6 +217,9 @@ export default {
       },
     ],
     'jest/prefer-mock-promise-shorthand': [
+      'error',
+    ],
+    'jest/prefer-mock-return-shorthand': [
       'error',
     ],
     'jest/prefer-snapshot-hint': [
@@ -188,6 +236,12 @@ export default {
       'error',
     ],
     'jest/prefer-to-contain': [
+      'error',
+    ],
+    'jest/prefer-to-have-been-called': [
+      'error',
+    ],
+    'jest/prefer-to-have-been-called-times': [
       'error',
     ],
     'jest/prefer-to-have-length': [
@@ -230,6 +284,24 @@ export default {
         ],
         minArgs: 1,
         maxArgs: 1,
+      },
+    ],
+    'jest/valid-expect-with-promise': [
+      'error',
+      {
+        checkThenables: false,
+      },
+    ],
+    'jest/valid-mock-module-path': [
+      'error',
+      {
+        moduleFileExtensions: [
+          '.js',
+          '.ts',
+          '.tsx',
+          '.jsx',
+          '.json',
+        ],
       },
     ],
     'jest/valid-title': [
