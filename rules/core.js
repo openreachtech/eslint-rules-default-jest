@@ -128,6 +128,9 @@ export default {
     'jest/no-unnecessary-assertion': [
       'error',
     ],
+    'jest/no-unneeded-async-expect-function': [
+      'error',
+    ],
     'jest/no-untyped-mock-factory': [
       'error',
     ],
