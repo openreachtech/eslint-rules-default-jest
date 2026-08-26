@@ -1788,6 +1788,16 @@ export default [
           maxArgs: 1,
         },
       ],
+      'jest/valid-expect-with-promise': [
+        /*
+         * This rule requires type information, which is not generated for the
+         * plain JavaScript sources of this repository.
+         */
+        'off', // 'error'
+        {
+          checkThenables: false,
+        },
+      ],
       'jest/valid-title': [
         'error',
         {
