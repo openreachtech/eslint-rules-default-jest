@@ -1618,6 +1618,13 @@ export default [
       'jest/no-duplicate-hooks': [
         'error',
       ],
+      'jest/no-error-equal': [
+        /*
+         * This rule requires type information, which is not generated for the
+         * plain JavaScript sources of this repository.
+         */
+        'off', // 'error'
+      ],
       'jest/no-export': [
         'error',
       ],
