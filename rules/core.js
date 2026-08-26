@@ -152,6 +152,9 @@ export default {
     'jest/padding-around-describe-blocks': [
       'error',
     ],
+    'jest/padding-around-expect-groups': [
+      'error',
+    ],
     'jest/prefer-called-with': [
       'error',
     ],
