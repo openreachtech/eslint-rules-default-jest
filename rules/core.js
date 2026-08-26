@@ -47,6 +47,9 @@ export default {
     ],
     'jest/no-conditional-in-test': [
       'error',
+      {
+        allowOptionalChaining: true,
+      },
     ],
     'jest/no-deprecated-functions': [
       'error',
@@ -149,6 +152,7 @@ export default {
         ignore: [],
         allowedPrefixes: [],
         ignoreTopLevelDescribe: false,
+        ignoreTodos: false,
       },
     ],
     'jest/prefer-mock-promise-shorthand': [
