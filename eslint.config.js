@@ -7,7 +7,7 @@ import jestPlugin from './index.js'
 /**
  * ESLint Config
  *
- * @type {Array<import('eslint').Linter.FlatConfig>}
+ * @type {Array<import('eslint').Linter.Config<*>>}
  */
 export default [
   {
