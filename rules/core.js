@@ -167,6 +167,15 @@ export default {
     'jest/prefer-each': [
       'error',
     ],
+    'jest/prefer-ending-with-an-expect': [
+      'error',
+      {
+        assertFunctionNames: [
+          'expect',
+        ],
+        additionalTestBlockFunctions: [],
+      },
+    ],
     'jest/prefer-equality-matcher': [
       'error',
     ],
