@@ -1,3 +1,3 @@
-'use strict'
+import config from './rules/core.js'
 
-module.exports = require('./rules/core')
+export default config

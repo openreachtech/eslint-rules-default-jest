@@ -5,5 +5,5 @@ import {
 declare module '@openreachtech/eslint-rules-default-jest' {
   const config: ESLint.ConfigData<ESLint.LintOptions>
 
-  export = config
+  export default config
 }

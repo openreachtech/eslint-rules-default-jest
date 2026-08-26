@@ -1,8 +1,6 @@
-'use strict'
+import core from '../../rules/core.js'
 
-const core = require('../../rules/core')
-
-const mainExports = require('../../index')
+import mainExports from '../../index.js'
 
 describe('main exports', () => {
   test('to be same', () => {
