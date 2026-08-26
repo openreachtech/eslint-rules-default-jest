@@ -195,6 +195,9 @@ export default {
         ],
       },
     ],
+    'jest/prefer-jest-mocked': [
+      'error',
+    ],
     'jest/prefer-lowercase-title': [
       'error',
       {
