@@ -167,7 +167,7 @@ export default [
         },
       ],
       'capitalized-comments': [
-        'off',
+        'off', // 'error'
         'always',
         {
           ignoreInlineComments: false,
@@ -176,7 +176,7 @@ export default [
         },
       ],
       'class-methods-use-this': [
-        'off',
+        'off', // 'error'
         {
           enforceForClassFields: true,
           exceptMethods: [],
@@ -247,7 +247,7 @@ export default [
         'property',
       ],
       'dot-notation': [
-        'off',
+        'off', // 'error'
         {
           allowKeywords: true,
           allowPattern: '^$',
@@ -262,7 +262,7 @@ export default [
         'always',
       ],
       'for-direction': [
-        'off',
+        'off', // 'error'
       ],
       'func-call-spacing': [
         'error',
@@ -277,7 +277,7 @@ export default [
         'as-needed',
       ],
       'func-style': [
-        'off',
+        'off', // 'error'
         'expression',
         {
           allowArrowFunctions: false,
@@ -309,7 +309,7 @@ export default [
         'getBeforeSet',
       ],
       'guard-for-in': [
-        'off',
+        'off', // 'error'
       ],
       'id-denylist': [
         'error',
@@ -429,7 +429,7 @@ export default [
         },
       ],
       'max-lines': [
-        'off',
+        'off', // 'error'
         {
           max: 300,
           skipBlankLines: false,
@@ -437,7 +437,7 @@ export default [
         },
       ],
       'max-lines-per-function': [
-        'off',
+        'off', // 'error'
         {
           max: 50,
           skipBlankLines: false,
@@ -454,7 +454,7 @@ export default [
         4,
       ],
       'max-statements': [
-        'off',
+        'off', // 'error'
         10,
       ],
       'max-statements-per-line': [
@@ -508,7 +508,7 @@ export default [
         'error',
       ],
       'no-bitwise': [
-        'off',
+        'off', // 'error'
         {
           allow: [],
           int32Hint: false,
@@ -556,7 +556,7 @@ export default [
         'error',
       ],
       'no-continue': [
-        'off',
+        'off', // 'error'
       ],
       'no-control-regex': [
         'error',
@@ -699,7 +699,7 @@ export default [
         'error',
       ],
       'no-inline-comments': [
-        'off',
+        'off', // 'error'
         {
           ignorePattern: '^$',
         },
@@ -743,7 +743,7 @@ export default [
         },
       ],
       'no-lone-blocks': [
-        'off',
+        'off', // 'error'
       ],
       'no-lonely-if': [
         'error',
@@ -755,7 +755,7 @@ export default [
         'error',
       ],
       'no-magic-numbers': [
-        'off',
+        'off', // 'error'
         {
           detectObjects: false,
           enforceConst: false,
@@ -1025,7 +1025,7 @@ export default [
         'error',
       ],
       'no-ternary': [
-        'off',
+        'off', // 'error'
       ],
       'no-this-before-super': [
         'error',
@@ -1050,10 +1050,10 @@ export default [
         'error',
       ],
       'no-undefined': [
-        'off',
+        'off', // 'error'
       ],
       'no-underscore-dangle': [
-        'off',
+        'off', // 'error'
         {
           allow: [],
           allowAfterThis: false,
@@ -1178,7 +1178,7 @@ export default [
         },
       ],
       'no-warning-comments': [
-        'off',
+        'off', // 'error'
         {
           terms: [
             'todo',
@@ -1335,7 +1335,7 @@ export default [
         'error',
       ],
       'prefer-named-capture-group': [
-        'off',
+        'off', // 'error'
       ],
       'prefer-numeric-literals': [
         'error',
@@ -1387,7 +1387,7 @@ export default [
         },
       ],
       'require-await': [
-        'off',
+        'off', // 'error'
       ],
       'require-unicode-regexp': [
         'error',
@@ -1411,7 +1411,7 @@ export default [
         'first',
       ],
       'sort-imports': [
-        'off',
+        'off', // 'error'
         {
           ignoreCase: false,
           ignoreDeclarationSort: false,
@@ -1426,7 +1426,7 @@ export default [
         },
       ],
       'sort-keys': [
-        'off',
+        'off', // 'error'
         'asc',
         {
           caseSensitive: true,
@@ -1436,7 +1436,7 @@ export default [
         },
       ],
       'sort-vars': [
-        'off',
+        'off', // 'error'
         {
           ignoreCase: false,
         },
