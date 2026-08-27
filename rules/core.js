@@ -176,6 +176,11 @@ export default {
     ],
     'jest/prefer-expect-assertions': [
       'error',
+      {
+        onlyFunctionsWithAsyncKeyword: false,
+        onlyFunctionsWithExpectInLoop: false,
+        onlyFunctionsWithExpectInCallback: false,
+      },
     ],
     'jest/prefer-expect-resolves': [
       'error',
