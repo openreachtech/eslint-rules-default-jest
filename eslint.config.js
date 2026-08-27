@@ -1570,148 +1570,43 @@ export default [
         'error',
         {
           fn: 'test',
-          withinDescribe: 'test',
+          withinDescribe: 'test', // 'it'
         },
       ],
-      'jest/expect-expect': [
-        'error',
-        {
-          assertFunctionNames: [
-            'expect',
-          ],
-          additionalTestBlockFunctions: [],
-        },
-      ],
-      'jest/max-expects': [
-        'error',
-        {
-          max: 5,
-        },
-      ],
-      'jest/max-nested-describe': [
-        'error',
-        {
-          max: 5,
-        },
-      ],
-      'jest/no-alias-methods': [
-        'error',
-      ],
-      'jest/no-commented-out-tests': [
-        'error',
-      ],
-      'jest/no-conditional-expect': [
-        'error',
-      ],
-      'jest/no-conditional-in-test': [
-        'error',
-      ],
-      'jest/no-deprecated-functions': [
-        'error',
-      ],
-      'jest/no-disabled-tests': [
-        'error',
-      ],
-      'jest/no-done-callback': [
-        'error',
-      ],
-      'jest/no-duplicate-hooks': [
-        'error',
-      ],
+
+      /*
+       * These rules require type information, which is not generated for the
+       * plain JavaScript sources of this repository.
+       */
       'jest/no-error-equal': [
-        /*
-         * This rule requires type information, which is not generated for the
-         * plain JavaScript sources of this repository.
-         */
         'off', // 'error'
-      ],
-      'jest/no-export': [
-        'error',
-      ],
-      'jest/no-focused-tests': [
-        'error',
       ],
       'jest/no-hooks': [
-        'off',
+        'off', // 'error'
+        {
+          allow: [],
+        },
       ],
       'jest/no-identical-title': [
-        'off',
-      ],
-      'jest/no-interpolation-in-snapshots': [
-        'error',
-      ],
-      'jest/no-jasmine-globals': [
-        'error',
-      ],
-      'jest/no-large-snapshots': [
-        'error',
-        {
-          maxSize: 12,
-          inlineMaxSize: 6,
-        },
-      ],
-      'jest/no-mocks-import': [
-        'error',
-      ],
-      'jest/no-restricted-jest-methods': [
-        'error',
-        {},
-      ],
-      'jest/no-restricted-matchers': [
-        'error',
-        {},
-      ],
-      'jest/no-standalone-expect': [
-        'error',
-        {
-          additionalTestBlockFunctions: [],
-        },
-      ],
-      'jest/no-test-prefixes': [
-        'error',
-      ],
-      'jest/no-test-return-statement': [
-        'error',
-      ],
-      'jest/no-unnecessary-assertion': [
-        /*
-         * This rule requires type information, which is not generated for the
-         * plain JavaScript sources of this repository.
-         */
         'off', // 'error'
       ],
-      'jest/no-untyped-mock-factory': [
-        'error',
-      ],
-      'jest/prefer-called-with': [
-        'error',
-      ],
-      'jest/prefer-comparison-matcher': [
-        'error',
-      ],
-      'jest/prefer-each': [
-        'error',
-      ],
-      'jest/prefer-equality-matcher': [
-        'error',
+      'jest/no-unnecessary-assertion': [
+        'off', // 'error'
       ],
       'jest/prefer-expect-assertions': [
-        'off',
+        'off', // 'error'
+        {
+          onlyFunctionsWithAsyncKeyword: false,
+          onlyFunctionsWithExpectInLoop: false,
+          onlyFunctionsWithExpectInCallback: false,
+        },
       ],
-      'jest/prefer-expect-resolves': [
-        'error',
-      ],
-      'jest/prefer-hooks-in-order': [
-        'error',
-      ],
-      'jest/prefer-hooks-on-top': [
-        'error',
-      ],
+
+      /*
+       * Enabling this rule requires importing the Jest functions from
+       * '@jest/globals', which is not declared as a dependency here.
+       */
       'jest/prefer-importing-jest-globals': [
-        /*
-         * Enabling this rule requires importing the Jest functions from
-         * '@jest/globals', which is not declared as a dependency here.
-         */
         'off', // 'error'
         {
           types: [
@@ -1725,89 +1620,27 @@ export default [
         },
       ],
       'jest/prefer-lowercase-title': [
-        'off',
+        'off', // 'error'
         {
           ignore: [],
           allowedPrefixes: [],
-          ignoreTopLevelDescribe: true,
+          ignoreTopLevelDescribe: true, // false
+          ignoreTodos: false,
         },
       ],
-      'jest/prefer-mock-promise-shorthand': [
-        'error',
-      ],
-      'jest/prefer-snapshot-hint': [
-        'error',
-        'multi',
-      ],
-      'jest/prefer-spy-on': [
-        'error',
-      ],
       'jest/prefer-strict-equal': [
-        'off',
-      ],
-      'jest/prefer-to-be': [
-        'error',
-      ],
-      'jest/prefer-to-contain': [
-        'error',
-      ],
-      'jest/prefer-to-have-length': [
-        'error',
-      ],
-      'jest/prefer-todo': [
-        'error',
+        'off', // 'error'
       ],
       'jest/require-hook': [
-        'off',
+        'off', // 'error'
         {
           allowedFunctionCalls: [],
         },
       ],
-      'jest/require-to-throw-message': [
-        'error',
-      ],
-      'jest/require-top-level-describe': [
-        'error',
-        {},
-      ],
-      'jest/valid-describe-callback': [
-        'error',
-      ],
-      'jest/valid-expect-in-promise': [
-        'error',
-      ],
-      'jest/valid-expect': [
-        'error',
-        {
-          alwaysAwait: false,
-          asyncMatchers: [
-            'toResolve',
-            'toReject',
-          ],
-          minArgs: 1,
-          maxArgs: 1,
-        },
-      ],
       'jest/valid-expect-with-promise': [
-        /*
-         * This rule requires type information, which is not generated for the
-         * plain JavaScript sources of this repository.
-         */
         'off', // 'error'
         {
           checkThenables: false,
-        },
-      ],
-      'jest/valid-title': [
-        'error',
-        {
-          ignoreTypeOfDescribeName: false,
-          disallowedWords: [],
-          mustMatch: {},
-          mustNotMatch: [
-            '\\.$',
-            'Titles should not end with a full-stop (.)',
-          ],
         },
       ],
     },
