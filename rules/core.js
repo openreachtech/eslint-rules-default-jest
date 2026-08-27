@@ -267,6 +267,15 @@ export default {
     ],
     'jest/unbound-method': [
       'error',
+      // {
+      //   ignoreStatic: false,
+      // },
+      /*
+       * The schema of this rule comes from @typescript-eslint/eslint-plugin.
+       * Without that plugin installed it falls back to an empty schema, which
+       * rejects any option. Therefore, we cannot give the default explicitly
+       * here.
+       */
     ],
     'jest/valid-describe-callback': [
       'error',
