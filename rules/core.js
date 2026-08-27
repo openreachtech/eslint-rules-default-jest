@@ -78,12 +78,7 @@ export default {
     'jest/no-hooks': [
       'error',
       {
-        allow: [
-          'beforeAll',
-          'beforeEach',
-          'afterAll',
-          'afterEach',
-        ],
+        allow: [],
       },
     ],
     'jest/no-identical-title': [
