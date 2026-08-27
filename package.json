@@ -23,9 +23,9 @@
     "eslint-plugin-jest": "^29.16.1"
   },
   "devDependencies": {
-    "@eslint/js": "^9.39.5",
+    "@eslint/js": "^10.0.1",
     "@types/jest": "^30.0.0",
-    "eslint": "^9.39.5",
+    "eslint": "^10.9.1",
     "eslint-plugin-jsdoc": "^64.2.1",
     "eslint-plugin-openreachtech": "^1.0.1",
     "jest": "^30.4.2"
