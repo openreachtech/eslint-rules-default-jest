@@ -7,7 +7,7 @@ import jestPlugin from './index.js'
 /**
  * ESLint Config
  *
- * @type {Array<import('eslint').Linter.Config<*>>}
+ * @type {Array<import('eslint').Linter.Config>}
  */
 export default [
   {
@@ -167,7 +167,7 @@ export default [
         },
       ],
       'capitalized-comments': [
-        'off',
+        'off', // 'error'
         'always',
         {
           ignoreInlineComments: false,
@@ -176,7 +176,7 @@ export default [
         },
       ],
       'class-methods-use-this': [
-        'off',
+        'off', // 'error'
         {
           enforceForClassFields: true,
           exceptMethods: [],
@@ -247,7 +247,7 @@ export default [
         'property',
       ],
       'dot-notation': [
-        'off',
+        'off', // 'error'
         {
           allowKeywords: true,
           allowPattern: '^$',
@@ -262,7 +262,7 @@ export default [
         'always',
       ],
       'for-direction': [
-        'off',
+        'off', // 'error'
       ],
       'func-call-spacing': [
         'error',
@@ -277,7 +277,7 @@ export default [
         'as-needed',
       ],
       'func-style': [
-        'off',
+        'off', // 'error'
         'expression',
         {
           allowArrowFunctions: false,
@@ -309,7 +309,7 @@ export default [
         'getBeforeSet',
       ],
       'guard-for-in': [
-        'off',
+        'off', // 'error'
       ],
       'id-denylist': [
         'error',
@@ -429,7 +429,7 @@ export default [
         },
       ],
       'max-lines': [
-        'off',
+        'off', // 'error'
         {
           max: 300,
           skipBlankLines: false,
@@ -437,7 +437,7 @@ export default [
         },
       ],
       'max-lines-per-function': [
-        'off',
+        'off', // 'error'
         {
           max: 50,
           skipBlankLines: false,
@@ -454,7 +454,7 @@ export default [
         4,
       ],
       'max-statements': [
-        'off',
+        'off', // 'error'
         10,
       ],
       'max-statements-per-line': [
@@ -508,7 +508,7 @@ export default [
         'error',
       ],
       'no-bitwise': [
-        'off',
+        'off', // 'error'
         {
           allow: [],
           int32Hint: false,
@@ -556,7 +556,7 @@ export default [
         'error',
       ],
       'no-continue': [
-        'off',
+        'off', // 'error'
       ],
       'no-control-regex': [
         'error',
@@ -699,7 +699,7 @@ export default [
         'error',
       ],
       'no-inline-comments': [
-        'off',
+        'off', // 'error'
         {
           ignorePattern: '^$',
         },
@@ -743,7 +743,7 @@ export default [
         },
       ],
       'no-lone-blocks': [
-        'off',
+        'off', // 'error'
       ],
       'no-lonely-if': [
         'error',
@@ -755,7 +755,7 @@ export default [
         'error',
       ],
       'no-magic-numbers': [
-        'off',
+        'off', // 'error'
         {
           detectObjects: false,
           enforceConst: false,
@@ -1025,7 +1025,7 @@ export default [
         'error',
       ],
       'no-ternary': [
-        'off',
+        'off', // 'error'
       ],
       'no-this-before-super': [
         'error',
@@ -1050,10 +1050,10 @@ export default [
         'error',
       ],
       'no-undefined': [
-        'off',
+        'off', // 'error'
       ],
       'no-underscore-dangle': [
-        'off',
+        'off', // 'error'
         {
           allow: [],
           allowAfterThis: false,
@@ -1178,7 +1178,7 @@ export default [
         },
       ],
       'no-warning-comments': [
-        'off',
+        'off', // 'error'
         {
           terms: [
             'todo',
@@ -1335,7 +1335,7 @@ export default [
         'error',
       ],
       'prefer-named-capture-group': [
-        'off',
+        'off', // 'error'
       ],
       'prefer-numeric-literals': [
         'error',
@@ -1387,7 +1387,7 @@ export default [
         },
       ],
       'require-await': [
-        'off',
+        'off', // 'error'
       ],
       'require-unicode-regexp': [
         'error',
@@ -1411,7 +1411,7 @@ export default [
         'first',
       ],
       'sort-imports': [
-        'off',
+        'off', // 'error'
         {
           ignoreCase: false,
           ignoreDeclarationSort: false,
@@ -1426,7 +1426,7 @@ export default [
         },
       ],
       'sort-keys': [
-        'off',
+        'off', // 'error'
         'asc',
         {
           caseSensitive: true,
@@ -1436,7 +1436,7 @@ export default [
         },
       ],
       'sort-vars': [
-        'off',
+        'off', // 'error'
         {
           ignoreCase: false,
         },
@@ -1570,148 +1570,43 @@ export default [
         'error',
         {
           fn: 'test',
-          withinDescribe: 'test',
+          withinDescribe: 'test', // 'it'
         },
       ],
-      'jest/expect-expect': [
-        'error',
-        {
-          assertFunctionNames: [
-            'expect',
-          ],
-          additionalTestBlockFunctions: [],
-        },
-      ],
-      'jest/max-expects': [
-        'error',
-        {
-          max: 5,
-        },
-      ],
-      'jest/max-nested-describe': [
-        'error',
-        {
-          max: 5,
-        },
-      ],
-      'jest/no-alias-methods': [
-        'error',
-      ],
-      'jest/no-commented-out-tests': [
-        'error',
-      ],
-      'jest/no-conditional-expect': [
-        'error',
-      ],
-      'jest/no-conditional-in-test': [
-        'error',
-      ],
-      'jest/no-deprecated-functions': [
-        'error',
-      ],
-      'jest/no-disabled-tests': [
-        'error',
-      ],
-      'jest/no-done-callback': [
-        'error',
-      ],
-      'jest/no-duplicate-hooks': [
-        'error',
-      ],
+
+      /*
+       * These rules require type information, which is not generated for the
+       * plain JavaScript sources of this repository.
+       */
       'jest/no-error-equal': [
-        /*
-         * This rule requires type information, which is not generated for the
-         * plain JavaScript sources of this repository.
-         */
         'off', // 'error'
-      ],
-      'jest/no-export': [
-        'error',
-      ],
-      'jest/no-focused-tests': [
-        'error',
       ],
       'jest/no-hooks': [
-        'off',
+        'off', // 'error'
+        {
+          allow: [],
+        },
       ],
       'jest/no-identical-title': [
-        'off',
-      ],
-      'jest/no-interpolation-in-snapshots': [
-        'error',
-      ],
-      'jest/no-jasmine-globals': [
-        'error',
-      ],
-      'jest/no-large-snapshots': [
-        'error',
-        {
-          maxSize: 12,
-          inlineMaxSize: 6,
-        },
-      ],
-      'jest/no-mocks-import': [
-        'error',
-      ],
-      'jest/no-restricted-jest-methods': [
-        'error',
-        {},
-      ],
-      'jest/no-restricted-matchers': [
-        'error',
-        {},
-      ],
-      'jest/no-standalone-expect': [
-        'error',
-        {
-          additionalTestBlockFunctions: [],
-        },
-      ],
-      'jest/no-test-prefixes': [
-        'error',
-      ],
-      'jest/no-test-return-statement': [
-        'error',
-      ],
-      'jest/no-unnecessary-assertion': [
-        /*
-         * This rule requires type information, which is not generated for the
-         * plain JavaScript sources of this repository.
-         */
         'off', // 'error'
       ],
-      'jest/no-untyped-mock-factory': [
-        'error',
-      ],
-      'jest/prefer-called-with': [
-        'error',
-      ],
-      'jest/prefer-comparison-matcher': [
-        'error',
-      ],
-      'jest/prefer-each': [
-        'error',
-      ],
-      'jest/prefer-equality-matcher': [
-        'error',
+      'jest/no-unnecessary-assertion': [
+        'off', // 'error'
       ],
       'jest/prefer-expect-assertions': [
-        'off',
+        'off', // 'error'
+        {
+          onlyFunctionsWithAsyncKeyword: false,
+          onlyFunctionsWithExpectInLoop: false,
+          onlyFunctionsWithExpectInCallback: false,
+        },
       ],
-      'jest/prefer-expect-resolves': [
-        'error',
-      ],
-      'jest/prefer-hooks-in-order': [
-        'error',
-      ],
-      'jest/prefer-hooks-on-top': [
-        'error',
-      ],
+
+      /*
+       * Enabling this rule requires importing the Jest functions from
+       * '@jest/globals', which is not declared as a dependency here.
+       */
       'jest/prefer-importing-jest-globals': [
-        /*
-         * Enabling this rule requires importing the Jest functions from
-         * '@jest/globals', which is not declared as a dependency here.
-         */
         'off', // 'error'
         {
           types: [
@@ -1725,525 +1620,62 @@ export default [
         },
       ],
       'jest/prefer-lowercase-title': [
-        'off',
+        'off', // 'error'
         {
           ignore: [],
           allowedPrefixes: [],
-          ignoreTopLevelDescribe: true,
+          ignoreTopLevelDescribe: true, // false
+          ignoreTodos: false,
         },
       ],
-      'jest/prefer-mock-promise-shorthand': [
-        'error',
-      ],
-      'jest/prefer-snapshot-hint': [
-        'error',
-        'multi',
-      ],
-      'jest/prefer-spy-on': [
-        'error',
-      ],
       'jest/prefer-strict-equal': [
-        'off',
-      ],
-      'jest/prefer-to-be': [
-        'error',
-      ],
-      'jest/prefer-to-contain': [
-        'error',
-      ],
-      'jest/prefer-to-have-length': [
-        'error',
-      ],
-      'jest/prefer-todo': [
-        'error',
+        'off', // 'error'
       ],
       'jest/require-hook': [
-        'off',
+        'off', // 'error'
         {
           allowedFunctionCalls: [],
         },
       ],
-      'jest/require-to-throw-message': [
-        'error',
-      ],
-      'jest/require-top-level-describe': [
-        'error',
-        {},
-      ],
-      'jest/valid-describe-callback': [
-        'error',
-      ],
-      'jest/valid-expect-in-promise': [
-        'error',
-      ],
-      'jest/valid-expect': [
-        'error',
-        {
-          alwaysAwait: false,
-          asyncMatchers: [
-            'toResolve',
-            'toReject',
-          ],
-          minArgs: 1,
-          maxArgs: 1,
-        },
-      ],
       'jest/valid-expect-with-promise': [
-        /*
-         * This rule requires type information, which is not generated for the
-         * plain JavaScript sources of this repository.
-         */
         'off', // 'error'
         {
           checkThenables: false,
         },
       ],
-      'jest/valid-title': [
-        'error',
-        {
-          ignoreTypeOfDescribeName: false,
-          disallowedWords: [],
-          mustMatch: {},
-          mustNotMatch: [
-            '\\.$',
-            'Titles should not end with a full-stop (.)',
-          ],
-        },
-      ],
     },
   },
   {
-    plugins: {
-      jsdoc: jsdocPlugin,
-    },
+    ...jsdocPlugin.configs['flat/recommended-error'],
+
     rules: {
-      'jsdoc/check-access': [
-        'error',
-      ],
-      'jsdoc/check-alignment': [
-        'error',
-      ],
-      'jsdoc/check-indentation': [
-        'error',
-        {
-          excludeTags: [
-            'example',
-            'param',
-            'returns',
-            'type',
-            'typedef',
-            'yields',
-          ],
-        },
-      ],
-      'jsdoc/check-line-alignment': [
-        'error',
-        'never',
-        {
-          tags: [
-            'param',
-            'arg',
-            'argument',
-            'property',
-            'prop',
-            'returns',
-            'return',
-          ],
-          customSpacings: {
-            postDelimiter: 1,
-            postTag: 1,
-            postType: 1,
-            postName: 1,
-            postHyphen: 1,
-          },
-          preserveMainDescriptionPostDelimiter: false,
-          wrapIndent: '',
-        },
-      ],
-      'jsdoc/check-param-names': [
-        'error',
-        {
-          allowExtraTrailingParamDocs: false,
-          checkDestructured: true,
-          checkRestProperty: false,
-          enableFixer: false,
-          disableExtraPropertyReporting: false,
-          useDefaultObjectProperties: false,
-        },
-      ],
-      'jsdoc/check-property-names': [
-        'error',
-        {
-          enableFixer: false,
-        },
-      ],
-      'jsdoc/check-syntax': [
-        'error',
-      ],
-      'jsdoc/check-tag-names': [
-        'error',
-        {
-          definedTags: [],
-          enableFixer: true,
-          jsxTags: false,
-          typed: false,
-        },
-      ],
-      'jsdoc/check-types': [
-        'error',
-        {
-          noDefaults: false,
-          unifyParentAndChildTypeChecks: false,
-          exemptTagContexts: [],
-        },
-      ],
-      'jsdoc/check-values': [
-        'error',
-        {
-          allowedAuthors: [],
-          allowedLicenses: [],
-          numericOnlyVariation: false,
-          licensePattern: '/([^\\\\n\\\\r]*)/gu',
-        },
-      ],
-      'jsdoc/empty-tags': [
-        'error',
-        {
-          tags: [],
-        },
-      ],
-      'jsdoc/implements-on-classes': [
-        'error',
-      ],
-      'jsdoc/imports-as-dependencies': [
-        'off',
-      ],
-      'jsdoc/informative-docs': [
-        'off',
-        {
-          aliases: [
-            'an',
-            'our',
-          ],
-          uselessWords: [
-            'a',
-            'an',
-            'i',
-            'in',
-            'of',
-            's',
-            'the',
-          ],
-        },
-      ],
-      'jsdoc/match-description': [
-        'off',
-        {
-          mainDescription: true,
-          matchDescription: '^\\n?([A-Z`\\d_][\\s\\S]*[.?!`]\\s*)?$',
-          message: 'JSDoc description must start with a capital letter.',
-          nonemptyTags: true,
-          tags: {},
-        },
-      ],
-      'jsdoc/match-name': [
-        'error',
-        {
-          match: [],
-        },
-      ],
-      'jsdoc/multiline-blocks': [
-        'error',
-        {
-          allowMultipleTags: true,
-          multilineTags: [
-            '*',
-          ],
-          noFinalLineText: true,
-          noMultilineBlocks: false,
-          noSingleLineBlocks: true,
-          noZeroLineText: true,
-          singleLineTags: [
-            'lends',
-            'type',
-            'inheritdoc',
-            'override',
-          ],
-        },
-      ],
-      'jsdoc/no-bad-blocks': [
-        'error',
-        {
-          ignore: [
-            'ts-check',
-            'ts-expect-error',
-            'ts-ignore',
-            'ts-nocheck',
-          ],
-          preventAllMultiAsteriskBlocks: false,
-        },
-      ],
-      'jsdoc/no-blank-block-descriptions': [
-        'error',
-      ],
-      'jsdoc/no-blank-blocks': [
-        'error',
-        {
-          enableFixer: false,
-        },
-      ],
-      'jsdoc/no-defaults': [
-        'error',
-        {
-          noOptionalParamNames: false,
-        },
-      ],
-      'jsdoc/no-missing-syntax': [
-        'error',
-        {
-          contexts: [],
-        },
-      ],
-      'jsdoc/no-multi-asterisks': [
-        'error',
-        {
-          allowWhitespace: true,
-          preventAtEnd: true,
-          preventAtMiddleLines: true,
-        },
-      ],
-      'jsdoc/no-restricted-syntax': [
-        'error',
-        {
-          contexts: [],
-        },
-      ],
-      'jsdoc/no-types': [
-        'error',
-        {
-          contexts: [],
-        },
-      ],
-      'jsdoc/no-undefined-types': [
-        'error',
-        {
-          definedTypes: [],
-          disableReporting: false,
-          markVariablesAsUsed: true,
-        },
-      ],
-      'jsdoc/require-asterisk-prefix': [
-        'error',
-        'always',
-        {
-          tags: {},
-        },
-      ],
-      'jsdoc/require-description': [
-        'off',
-        {
-          checkConstructors: true,
-          checkGetters: true,
-          checkSetters: true,
-          descriptionStyle: 'body',
-          exemptedBy: [
-            'inheritdoc',
-          ],
-        },
-      ],
-      'jsdoc/require-description-complete-sentence': [
-        'off',
-        {
-          abbreviations: [],
-          newlineBeforeCapsAssumesBadSentenceEnd: false,
-          tags: [],
-        },
-      ],
-      'jsdoc/require-example': [
-        'off',
-        {
-          checkConstructors: true,
-          checkGetters: false,
-          checkSetters: false,
-          enableFixer: true,
-          exemptedBy: [
-            'inheritdoc',
-          ],
-          exemptNoArguments: false,
-        },
-      ],
-      'jsdoc/require-file-overview': [
-        'off',
-        {
-          tags: {
-            file: {
-              initialCommentsOnly: true,
-              mustExist: true,
-              preventDuplicates: true,
-            },
-          },
-        },
-      ],
-      'jsdoc/require-hyphen-before-param-description': [
-        'error',
-        'always',
-        {
-          tags: {},
-        },
-      ],
-      'jsdoc/require-jsdoc': [
-        'error',
-        {
-          checkConstructors: true,
-          checkGetters: true,
-          checkSetters: true,
-          contexts: [],
-          enableFixer: true,
-          exemptEmptyConstructors: false,
-          exemptEmptyFunctions: false,
-          fixerMessage: '',
-          publicOnly: false,
-          require: {
-            ArrowFunctionExpression: false,
-            ClassDeclaration: false,
-            ClassExpression: false,
-            FunctionDeclaration: true,
-            FunctionExpression: false,
-            MethodDefinition: true,
-          },
-        },
-      ],
-      'jsdoc/require-param': [
-        'error',
-        {
-          autoIncrementBase: 0,
-          checkRestProperty: false,
-          checkDestructured: true,
-          checkDestructuredRoots: true,
-          checkTypesPattern: '/^(?:[oO]bject|[aA]rray|PlainObject|Generic(?:Object|Array))$/',
-          enableFixer: true,
-          enableRootFixer: true,
-          enableRestElementFixer: true,
-          unnamedRootBase: [
-            'root',
-          ],
-          useDefaultObjectProperties: false,
-        },
-      ],
+      ...jsdocPlugin.configs['flat/recommended-error'].rules,
+
       'jsdoc/require-param-description': [
-        'off',
+        'off', // 'error'
         {
           defaultDestructuredRootDescription: 'The root object',
           setDefaultDestructuredRootDescription: false,
         },
       ],
-      'jsdoc/require-param-name': [
-        'error',
-      ],
-      'jsdoc/require-param-type': [
-        'error',
-        {
-          defaultDestructuredRootType: 'object',
-          setDefaultDestructuredRootType: false,
-        },
-      ],
-      'jsdoc/require-property': [
-        'error',
-      ],
-      'jsdoc/require-property-description': [
-        'error',
-      ],
-      'jsdoc/require-property-name': [
-        'error',
-      ],
-      'jsdoc/require-property-type': [
-        'error',
-      ],
-      'jsdoc/require-returns': [
-        'error',
-        {
-          checkConstructors: false,
-          checkGetters: true,
-          exemptedBy: [
-            'inheritdoc',
-          ],
-          forceRequireReturn: false,
-          forceReturnsWithAsync: false,
-        },
-      ],
-      'jsdoc/require-returns-check': [
-        'error',
-        {
-          exemptAsync: true,
-          exemptGenerators: false,
-          reportMissingReturnForUndefinedTypes: false,
-        },
-      ],
       'jsdoc/require-returns-description': [
-        'off',
-      ],
-      'jsdoc/require-returns-type': [
-        'error',
-      ],
-      'jsdoc/require-throws': [
-        'error',
-        {
-          exemptedBy: [
-            'inheritdoc',
-          ],
-        },
-      ],
-      'jsdoc/require-yields': [
-        'error',
-        {
-          exemptedBy: [
-            'inheritdoc',
-          ],
-          forceRequireYields: false,
-          withGeneratorTag: true,
-          next: false,
-          forceRequireNext: false,
-          nextWithGeneratorTag: false,
-        },
-      ],
-      'jsdoc/require-yields-check': [
-        'error',
-        {
-          checkGeneratorsOnly: false,
-          next: false,
-        },
-      ],
-      'jsdoc/sort-tags': [
-        'error',
-        {
-          alphabetizeExtras: false,
-          linesBetween: 0,
-          reportIntraTagGroupSpacing: false,
-          reportTagGroupSpacing: true,
-        },
+        'off', // 'error'
       ],
       'jsdoc/tag-lines': [
         'error',
         'never',
         {
           count: 1,
-          startLines: 1,
+          maxBlockLines: null,
+          startLines: 1, // 0
+          // startLinesWithNoTags: null,
+          /*
+           * The default is null, but the schema accepts a number only.
+           * Therefore, we cannot give the default explicitly here.
+           */
           endLines: 0,
           applyToEndTag: true,
           tags: {},
-        },
-      ],
-      'jsdoc/text-escaping': [
-        'off',
-        {
-          escapeHTML: false,
-          escapeMarkdown: false,
-        },
-      ],
-      'jsdoc/valid-types': [
-        'error',
-        {
-          allowEmptyNamepaths: true,
         },
       ],
     },

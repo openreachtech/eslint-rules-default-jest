@@ -78,12 +78,7 @@ export default {
     'jest/no-hooks': [
       'error',
       {
-        allow: [
-          'beforeAll',
-          'beforeEach',
-          'afterAll',
-          'afterEach',
-        ],
+        allow: [],
       },
     ],
     'jest/no-identical-title': [
@@ -181,6 +176,11 @@ export default {
     ],
     'jest/prefer-expect-assertions': [
       'error',
+      {
+        onlyFunctionsWithAsyncKeyword: false,
+        onlyFunctionsWithExpectInLoop: false,
+        onlyFunctionsWithExpectInCallback: false,
+      },
     ],
     'jest/prefer-expect-resolves': [
       'error',
@@ -267,6 +267,15 @@ export default {
     ],
     'jest/unbound-method': [
       'error',
+      // {
+      //   ignoreStatic: false,
+      // },
+      /*
+       * The schema of this rule comes from @typescript-eslint/eslint-plugin.
+       * Without that plugin installed it falls back to an empty schema, which
+       * rejects any option. Therefore, we cannot give the default explicitly
+       * here.
+       */
     ],
     'jest/valid-describe-callback': [
       'error',
@@ -279,8 +288,8 @@ export default {
       {
         alwaysAwait: false,
         asyncMatchers: [
-          'toResolve',
           'toReject',
+          'toResolve',
         ],
         minArgs: 1,
         maxArgs: 1,
@@ -309,6 +318,7 @@ export default {
       {
         ignoreSpaces: false,
         ignoreTypeOfDescribeName: false,
+        ignoreTypeOfTestName: false,
         disallowedWords: [],
         mustMatch: {},
         mustNotMatch: {},
