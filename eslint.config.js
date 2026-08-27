@@ -1661,6 +1661,23 @@ export default [
       'jsdoc/require-returns-description': [
         'off', // 'error'
       ],
+      'jsdoc/tag-lines': [
+        'error',
+        'never',
+        {
+          count: 1,
+          maxBlockLines: null,
+          startLines: 1, // 0
+          // startLinesWithNoTags: null,
+          /*
+           * The default is null, but the schema accepts a number only.
+           * Therefore, we cannot give the default explicitly here.
+           */
+          endLines: 0,
+          applyToEndTag: true,
+          tags: {},
+        },
+      ],
     },
   },
   {
