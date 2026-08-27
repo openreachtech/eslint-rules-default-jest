@@ -279,8 +279,8 @@ export default {
       {
         alwaysAwait: false,
         asyncMatchers: [
-          'toResolve',
           'toReject',
+          'toResolve',
         ],
         minArgs: 1,
         maxArgs: 1,
