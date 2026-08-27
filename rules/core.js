@@ -304,6 +304,7 @@ export default {
       {
         ignoreSpaces: false,
         ignoreTypeOfDescribeName: false,
+        ignoreTypeOfTestName: false,
         disallowedWords: [],
         mustMatch: {},
         mustNotMatch: {},
