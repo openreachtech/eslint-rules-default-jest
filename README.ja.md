@@ -19,13 +19,6 @@
 
 ### Installing
 
-`.npmrc` に以下を追加してください。
-
-```
-// .npmrc
-@openreachtech:registry=https://npm.pkg.github.com
-```
-
 ESLint v9 以降と一緒に此のパッケージをインストールします。
 
 ```sh

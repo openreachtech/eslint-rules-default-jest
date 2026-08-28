@@ -23,13 +23,6 @@ This package is only for Flat Config.
 
 ### Installing
 
-Please add the following line to your `.npmrc` file.
-
-```
-// .npmrc
-@openreachtech:registry=https://npm.pkg.github.com
-```
-
 Install this package alongside ESLint v9 or greater:
 
 ```sh
