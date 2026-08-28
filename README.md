@@ -12,10 +12,10 @@ This package provides ESLint Jest plugin rules with default options.
 If this package is used as a base ruleset in another ESLint config repository, all rules
 are enabled by default. You must explicitly turn off each rule that you want to disable.
 
-Rules deprecated in the plugin are not included in the exported ruleset, so it holds
-fewer rules than the plugin itself. Their default options are documented in
-`rules/deprecated.js` and exported as `deprecated`. The two rulesets together cover
-every rule of the plugin.
+Rules deprecated in the plugin are kept out of the exported ruleset. Their default
+options are documented in `rules/deprecated.js` and exported as `deprecated` instead.
+The plugin carries no deprecated rule at present, so the exported ruleset holds every
+rule of it. The two rulesets together always cover the whole plugin.
 
 This package is only for Flat Config.
 
