@@ -11,20 +11,15 @@
 
 他の ESLint 構成リポジトリの基本ルールセットとして使用すると、すべてのルールが機能します。無効にしたいルールは、各ルールを明示的にオフにする必要があります。
 
+プラグインで deprecated となったルールは、エクスポートされるルールセットに含めません。それらのディフォルトオプションは `rules/deprecated.js` に記録し、`deprecated` としてエクスポートします。現在のプラグインに deprecated ルールはないため、エクスポートされるルールセットはプラグインの全ルールを含みます。2 つのルールセットを合わせると、常にプラグインの全ルールを網羅します。
+
 此のパッケージは、Flat Config 専用です。
 
 ## Usage
 
 ### Installing
 
-`.npmrc` に以下を追加してください。
-
-```
-// .npmrc
-@openreachtech:registry=https://npm.pkg.github.com
-```
-
-ESLint v9 以降と一緒に此のパッケージをインストールします。
+ESLint v10 以降と一緒に此のパッケージをインストールします。
 
 ```sh
 npm install --save-dev \
@@ -59,7 +54,8 @@ export default [
         {
           ignore: [],
           allowedPrefixes: [],
-          ignoreTopLevelDescribe: false, // true
+          ignoreTopLevelDescribe: true, // false
+          ignoreTodos: false,
         },
       ],
 
@@ -96,7 +92,8 @@ export default [
         {
           ignore: [],
           allowedPrefixes: [],
-          ignoreTopLevelDescribe: false, // true <--- ✅
+          ignoreTopLevelDescribe: true, // false <--- ✅
+          ignoreTodos: false,
         },
       ],
 

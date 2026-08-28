@@ -1,3 +1,8 @@
-'use strict'
+import config from './rules/core.js'
+import deprecated from './rules/deprecated.js'
 
-module.exports = require('./rules/core')
+export default config
+
+export {
+  deprecated,
+}

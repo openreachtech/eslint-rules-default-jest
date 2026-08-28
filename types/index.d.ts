@@ -1,9 +1,12 @@
 import {
-  ESLint,
+  Linter,
 } from 'eslint'
 
-declare module '@openreachtech/eslint-rules-default-jest' {
-  const config: ESLint.ConfigData<ESLint.LintOptions>
+declare const config: Linter.Config
+declare const deprecated: Linter.Config
 
-  export = config
+export default config
+
+export {
+  deprecated,
 }

@@ -1,10 +1,8 @@
-'use strict'
-
-const jestPlugin = require('eslint-plugin-jest')
+import jestPlugin from 'eslint-plugin-jest'
 
 const jestFlatConfigRecommended = jestPlugin.configs['flat/recommended']
 
-module.exports = {
+export default {
   ...jestFlatConfigRecommended,
 
   rules: {
@@ -49,6 +47,12 @@ module.exports = {
     ],
     'jest/no-conditional-in-test': [
       'error',
+      {
+        allowOptionalChaining: true,
+      },
+    ],
+    'jest/no-confusing-set-timeout': [
+      'error',
     ],
     'jest/no-deprecated-functions': [
       'error',
@@ -62,6 +66,9 @@ module.exports = {
     'jest/no-duplicate-hooks': [
       'error',
     ],
+    'jest/no-error-equal': [
+      'error',
+    ],
     'jest/no-export': [
       'error',
     ],
@@ -71,12 +78,7 @@ module.exports = {
     'jest/no-hooks': [
       'error',
       {
-        allow: [
-          'beforeAll',
-          'beforeEach',
-          'afterAll',
-          'afterEach',
-        ],
+        allow: [],
       },
     ],
     'jest/no-identical-title': [
@@ -118,7 +120,37 @@ module.exports = {
     'jest/no-test-return-statement': [
       'error',
     ],
+    'jest/no-unnecessary-assertion': [
+      'error',
+    ],
+    'jest/no-unneeded-async-expect-function': [
+      'error',
+    ],
     'jest/no-untyped-mock-factory': [
+      'error',
+    ],
+    'jest/padding-around-after-all-blocks': [
+      'error',
+    ],
+    'jest/padding-around-after-each-blocks': [
+      'error',
+    ],
+    'jest/padding-around-all': [
+      'error',
+    ],
+    'jest/padding-around-before-all-blocks': [
+      'error',
+    ],
+    'jest/padding-around-before-each-blocks': [
+      'error',
+    ],
+    'jest/padding-around-describe-blocks': [
+      'error',
+    ],
+    'jest/padding-around-expect-groups': [
+      'error',
+    ],
+    'jest/padding-around-test-blocks': [
       'error',
     ],
     'jest/prefer-called-with': [
@@ -130,11 +162,25 @@ module.exports = {
     'jest/prefer-each': [
       'error',
     ],
+    'jest/prefer-ending-with-an-expect': [
+      'error',
+      {
+        assertFunctionNames: [
+          'expect',
+        ],
+        additionalTestBlockFunctions: [],
+      },
+    ],
     'jest/prefer-equality-matcher': [
       'error',
     ],
     'jest/prefer-expect-assertions': [
       'error',
+      {
+        onlyFunctionsWithAsyncKeyword: false,
+        onlyFunctionsWithExpectInLoop: false,
+        onlyFunctionsWithExpectInCallback: false,
+      },
     ],
     'jest/prefer-expect-resolves': [
       'error',
@@ -145,15 +191,35 @@ module.exports = {
     'jest/prefer-hooks-on-top': [
       'error',
     ],
+    'jest/prefer-importing-jest-globals': [
+      'error',
+      {
+        types: [
+          'hook',
+          'describe',
+          'test',
+          'expect',
+          'jest',
+          'unknown',
+        ],
+      },
+    ],
+    'jest/prefer-jest-mocked': [
+      'error',
+    ],
     'jest/prefer-lowercase-title': [
       'error',
       {
         ignore: [],
         allowedPrefixes: [],
         ignoreTopLevelDescribe: false,
+        ignoreTodos: false,
       },
     ],
     'jest/prefer-mock-promise-shorthand': [
+      'error',
+    ],
+    'jest/prefer-mock-return-shorthand': [
       'error',
     ],
     'jest/prefer-snapshot-hint': [
@@ -170,6 +236,12 @@ module.exports = {
       'error',
     ],
     'jest/prefer-to-contain': [
+      'error',
+    ],
+    'jest/prefer-to-have-been-called': [
+      'error',
+    ],
+    'jest/prefer-to-have-been-called-times': [
       'error',
     ],
     'jest/prefer-to-have-length': [
@@ -193,6 +265,18 @@ module.exports = {
         maxNumberOfTopLevelDescribes: Infinity,
       },
     ],
+    'jest/unbound-method': [
+      'error',
+      // {
+      //   ignoreStatic: false,
+      // },
+      /*
+       * The schema of this rule comes from @typescript-eslint/eslint-plugin.
+       * Without that plugin installed it falls back to an empty schema, which
+       * rejects any option. Therefore, we cannot give the default explicitly
+       * here.
+       */
+    ],
     'jest/valid-describe-callback': [
       'error',
     ],
@@ -204,11 +288,29 @@ module.exports = {
       {
         alwaysAwait: false,
         asyncMatchers: [
-          'toResolve',
           'toReject',
+          'toResolve',
         ],
         minArgs: 1,
         maxArgs: 1,
+      },
+    ],
+    'jest/valid-expect-with-promise': [
+      'error',
+      {
+        checkThenables: false,
+      },
+    ],
+    'jest/valid-mock-module-path': [
+      'error',
+      {
+        moduleFileExtensions: [
+          '.js',
+          '.ts',
+          '.tsx',
+          '.jsx',
+          '.json',
+        ],
       },
     ],
     'jest/valid-title': [
@@ -216,6 +318,7 @@ module.exports = {
       {
         ignoreSpaces: false,
         ignoreTypeOfDescribeName: false,
+        ignoreTypeOfTestName: false,
         disallowedWords: [],
         mustMatch: {},
         mustNotMatch: {},
