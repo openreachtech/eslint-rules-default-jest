@@ -20,6 +20,14 @@
   ],
   "author": "Open Reach Tech Inc.",
   "license": "Apache-2.0",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/openreachtech/eslint-rules-default-jest.git"
+  },
+  "homepage": "https://github.com/openreachtech/eslint-rules-default-jest#readme",
+  "bugs": {
+    "url": "https://github.com/openreachtech/eslint-rules-default-jest/issues"
+  },
   "dependencies": {
     "eslint-plugin-jest": "^29.16.1"
   },
