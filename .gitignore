@@ -1,6 +1,9 @@
 #### environment
 .env
-node_modules
+node_modules/
+
+#### Build output
+dist/
 
 #### for Windows
 Thumbs.db
@@ -15,3 +18,22 @@ ehthumbs_vista.db
 .vscode/*
 !.vscode/cspell.json
 !.vscode/settings.json
+
+#### Lock files
+yarn.lock
+pnpm-lock.yaml
+bun.lockb
+
+#### keys and certificates
+#
+# Nothing here is authored in this repository, and the entries exist for what
+# gets built inside one made from it — a TLS certificate dropped in to test
+# against, a deploy key, a keystore. A secret committed once is committed for
+# as long as the history lives, so the patterns are here before the first
+# project needs them rather than after one of them leaks.
+*.pem
+*.key
+*.p12
+*.pfx
+id_rsa
+id_ed25519
