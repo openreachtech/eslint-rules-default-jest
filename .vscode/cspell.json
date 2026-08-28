@@ -8,13 +8,9 @@
     "camelcase",
     "defaultvalue",
     "eqeqeq",
-    "fileoverview",
-    "hashbang",
     "iife",
     "iifes",
     "linebreak",
-    "namepaths",
-    "nocheck",
     "nonblock",
     "nonoctal",
     "nonwords",
@@ -23,13 +19,6 @@
     "plusplus",
     "ruleset",
     "rulesets",
-    "wizaction",
-
-    "noalias",
-    "nocollapse",
-    "nocompile",
-    "noinline",
-    "nosideeffects",
 
     "bject",
     "rray"
