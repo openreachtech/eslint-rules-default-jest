@@ -23,7 +23,7 @@ This package is only for Flat Config.
 
 ### Installing
 
-Install this package alongside ESLint v9 or greater:
+Install this package alongside ESLint v10 or greater:
 
 ```sh
 npm install --save-dev \

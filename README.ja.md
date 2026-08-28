@@ -19,7 +19,7 @@
 
 ### Installing
 
-ESLint v9 以降と一緒に此のパッケージをインストールします。
+ESLint v10 以降と一緒に此のパッケージをインストールします。
 
 ```sh
 npm install --save-dev \
