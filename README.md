@@ -58,7 +58,7 @@ export default [
         {
           ignore: [],
           allowedPrefixes: [],
-          ignoreTopLevelDescribe: false, // true
+          ignoreTopLevelDescribe: true, // false
         },
       ],
 
@@ -95,7 +95,7 @@ export default [
         {
           ignore: [],
           allowedPrefixes: [],
-          ignoreTopLevelDescribe: false, // true <--- ✅
+          ignoreTopLevelDescribe: true, // false <--- ✅
         },
       ],
 
