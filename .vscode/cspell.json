@@ -1,20 +1,18 @@
 {
   "words": [
     "jsdoc",
+    "npmjs",
     "openreach",
     "openreachtech",
+    "unrs",
 
     "backreference",
     "camelcase",
     "defaultvalue",
     "eqeqeq",
-    "fileoverview",
-    "hashbang",
     "iife",
     "iifes",
     "linebreak",
-    "namepaths",
-    "nocheck",
     "nonblock",
     "nonoctal",
     "nonwords",
@@ -23,15 +21,12 @@
     "plusplus",
     "ruleset",
     "rulesets",
-    "wizaction",
+    "thenables",
+    "tinyint",
+    "unbumped",
 
-    "noalias",
-    "nocollapse",
-    "nocompile",
-    "noinline",
-    "nosideeffects",
-
-    "bject",
-    "rray"
+    "ehthumbs",
+    "encryptable",
+    "esac"
   ]
 }
