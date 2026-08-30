@@ -3,7 +3,7 @@
   "version": "2.0.0",
   "description": "A showcasing package all the Jest plugin rules of ESLint.",
   "type": "module",
-  "main": "index.js",
+  "main": "lib/index.js",
   "files": [
     "index.js",
     "rules/",
