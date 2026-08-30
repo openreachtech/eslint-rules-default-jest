@@ -1,6 +1,6 @@
 {
   "name": "@openreachtech/eslint-rules-default-jest",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "description": "A showcasing package all the Jest plugin rules of ESLint.",
   "type": "module",
   "main": "lib/index.js",
