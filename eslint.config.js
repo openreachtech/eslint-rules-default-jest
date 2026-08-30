@@ -2,7 +2,7 @@ import jsRules from '@eslint/js'
 import jsdocPlugin from 'eslint-plugin-jsdoc'
 import openreachtechPlugin from 'eslint-plugin-openreachtech'
 
-import jestPlugin from './index.js'
+import jestPlugin from './lib/index.js'
 
 /**
  * ESLint Config
