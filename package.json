@@ -11,6 +11,7 @@
   ],
   "types": "types/index.d.ts",
   "scripts": {
+    "audit:npm": "node node_modules/@openreachtech/mentsu-npm-audit-gate/scripts/npm-audit-gate.js scripts/stopgap-audit/IGNORED_ADVISORIES.js",
     "l": "npm run lint",
     "lint": "eslint .",
     "test": "export NODE_OPTIONS=\"$NODE_OPTIONS --experimental-vm-modules\"; jest --maxWorkers=5"
@@ -33,6 +34,7 @@
   },
   "devDependencies": {
     "@eslint/js": "^10.0.1",
+    "@openreachtech/mentsu-npm-audit-gate": "^0.1.1",
     "@types/jest": "^30.0.0",
     "eslint": "^10.9.1",
     "eslint-plugin-jsdoc": "^64.2.1",
@@ -41,6 +43,8 @@
   },
   "overrides": {
     "flatted": "^3.4.4",
+    "glob@>=9": "^14.0.2",
+    "minimatch@>=7": "^11.0.1",
     "picomatch@2": "^2.3.2"
   },
   "allowScripts": {
