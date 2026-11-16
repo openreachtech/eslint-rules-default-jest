@@ -1,6 +1,7 @@
 {
   "words": [
     "jsdoc",
+    "mentsu",
     "npmjs",
     "openreach",
     "openreachtech",
@@ -28,5 +29,8 @@
     "ehthumbs",
     "encryptable",
     "esac"
+  ],
+  "ignoreWords": [
+    "gcqx"
   ]
 }
