@@ -43,6 +43,8 @@
   },
   "overrides": {
     "flatted": "^3.4.4",
+    "glob": "^14.0.2",
+    "minimatch": "^11.0.1",
     "picomatch@2": "^2.3.2"
   },
   "allowScripts": {
