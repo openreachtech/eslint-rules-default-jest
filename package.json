@@ -34,6 +34,7 @@
   },
   "devDependencies": {
     "@eslint/js": "^10.0.1",
+    "@openreachtech/mentsu-github-actions-inspector": "^0.1.0",
     "@openreachtech/mentsu-npm-audit-gate": "^0.1.1",
     "@types/jest": "^30.0.0",
     "eslint": "^10.9.1",
