@@ -17,20 +17,6 @@ const IGNORED_ADVISORIES = [
     reason: 'No patched release: the advisory covers deepmerge >=4.2.0 <=4.3.1, and 4.3.1 is the latest. deepmerge is reached by jest-config alone, and jest is a devDependency of this package.',
     removeWhen: 'npm audit on this lockfile no longer reports GHSA-gcqx-w48m-w2h4',
   },
-  {
-    id: 'GHSA-3g3m-2fjr-6pw4',
-    package: 'glob',
-    path: 'jest > @jest/core > @jest/reporters > glob | jest > @jest/core > jest-config > glob | jest > @jest/core > jest-runtime > glob',
-    reason: 'Patched in glob 14.0.2, but the lockfile holds glob 10.5.0, and jest 30.5.2, the latest, still pins glob ^13.0.6 in @jest/reporters, jest-config and jest-runtime. No jest release admits a patched glob, and jest is a devDependency of this package.',
-    removeWhen: 'npm audit on this lockfile no longer reports GHSA-3g3m-2fjr-6pw4',
-  },
-  {
-    id: 'GHSA-g3hv-75wg-m249',
-    package: 'minimatch',
-    path: 'eslint > @eslint/config-array > minimatch | eslint > minimatch | eslint-plugin-jest > @typescript-eslint/utils > @typescript-eslint/typescript-estree > minimatch | jest > @jest/core > @jest/reporters > glob > minimatch',
-    reason: 'Patched in minimatch 11.0.1, but the lockfile holds minimatch 10.2.6 for eslint, @eslint/config-array and typescript-estree, and 9.0.9 under the glob 10 of jest. typescript-estree 8.72.2, the latest, pins minimatch ^10.2.2, and jest pins glob 13 (see the entry above). eslint 10.15.0 and @eslint/config-array 0.23.6, the first releases on minimatch ^11, were published on 2026-11-13 and pass the 7 day min-release-age after 2026-11-20.',
-    removeWhen: 'npm audit on this lockfile no longer reports GHSA-g3hv-75wg-m249',
-  },
 ]
 
 export default IGNORED_ADVISORIES
